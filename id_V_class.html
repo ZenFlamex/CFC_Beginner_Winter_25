@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class vs ID Demo</title>
+    <style>
+        /* Class selector: shared style for multiple elements */
+        .sayMyName {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        /* ID selector: style for just one element */
+        #him {
+            color: darkred;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sayMyName">
+        <p>Heisenberg</p>
+    </div>
+
+    <div class="sayMyName">
+        <p>Walter White</p>
+    </div>
+
+    <div class="sayMyName">
+        <p>WW</p>
+    </div>
+
+    <!-- <div class="sayMyName">
+        <p>Heisenberg</p>
+        <p>Walter White</p>
+        <p>WW</p>
+    </div> -->
+
+    <p id="him">You're goddamn right.</p>
+
+</body>
+</html>
