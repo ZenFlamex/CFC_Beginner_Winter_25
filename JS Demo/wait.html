@@ -1,0 +1,21 @@
+<h2>Async/Await Demo</h2>
+<p id="output">Waiting...</p>
+<!-- <button onclick="clickMe()">Click me while waiting</button>
+<p id="clickResult"></p> -->
+
+<script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function run() {
+  await sleep(3000);
+  document.getElementById("output").innerText = "Done waiting!";
+}
+
+// function clickMe() {
+//   document.getElementById("clickResult").innerText = "You clicked the button!";
+// }
+
+run();
+</script>

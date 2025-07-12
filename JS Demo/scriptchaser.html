@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Effect Demo</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #111;
+      color: #0f0;
+      padding: 50px;
+      font-size: 1.5em;
+    }
+
+    #introText {
+      border-right: 2px solid #0f0;
+      padding-right: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Typing Text Animation</h2>
+  <p id="introText"></p>
+
+  <script>
+    const writing = [
+      "chasing scripts and other stuff",
+      "noob @ uwa",
+      "beginner web developer",
+      "1337 very cool and stuff",
+      ":wolf_face: alpha!1!"
+    ];
+
+    let writingindex = 0; // which message we are on
+    let index = 0; // how many letters of the message are shown
+    let writtenNow = writing[writingindex]; // the current message being typed
+    let typingForward = true; // are we typing forward or deleting?
+
+
+    function typeWriter() {
+      const textElement = document.getElementById("introText");
+      textElement.textContent = writtenNow.substring(0, index);
+
+      if (typingForward) {
+        index++;
+        if (index > writtenNow.length) {
+          typingForward = false;
+          setTimeout(typeWriter, 1000); // pause before deleting
+        } else {
+          setTimeout(typeWriter, 100); // keep typing
+        }
+      } else {
+        index--;
+        if (index < 0) {
+          typingForward = true;
+          writingindex = (writingindex + 1) % writing.length;
+          writtenNow = writing[writingindex];
+          setTimeout(typeWriter, 1000); // pause before typing next
+        } else {
+          setTimeout(typeWriter, 50); // faster delete
+        }
+      }
+    }
+
+    typeWriter(); // Start animation
+  </script>
+
+</body>
+</html>

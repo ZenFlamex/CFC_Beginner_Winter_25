@@ -1,0 +1,14 @@
+<h2>Scope Example</h2>
+<p id="output"></p>
+
+<script>
+let message = "Hello from global scope";
+
+function showMessage() {
+  let local = "Hello from function scope";
+  document.getElementById("output").innerText = local;
+}
+
+showMessage();
+// console.log(local); // Would cause an error if uncommented
+</script>

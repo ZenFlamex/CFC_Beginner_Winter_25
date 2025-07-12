@@ -1,0 +1,16 @@
+<h2>Closure with Base Number</h2>
+<button onclick="addOne()">Add 1</button>
+<button onclick="addFive()">Add 5</button>
+<p id="output"></p>
+
+<script>
+function makeAdder(x) {
+  const base = 2;
+  return function() {
+    document.getElementById("output").innerText = "Result: " + (base + x);
+  };
+}
+
+const addOne = makeAdder(1);
+const addFive = makeAdder(5);
+</script>
