@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .demo-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .breakpoint-info {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Bootstrap Demo</h1>
+        
+        <!-- Breakpoint Info E.g. d-{default} d-{breakpoint}-{value} -->
+        <div class="breakpoint-info">
+            <h3>Current Breakpoint Info:</h3>
+            <div class="d-block d-sm-none">📱 XS: Extra Small (< 576px)</div>
+            <div class="d-none d-sm-block d-md-none">📱 SM: Small (≥ 576px)</div>
+            <div class="d-none d-md-block d-lg-none">💻 MD: Medium (≥ 768px)</div>
+            <div class="d-none d-lg-block d-xl-none">🖥️ LG: Large (≥ 992px)</div>
+            <div class="d-none d-xl-block">🖥️ XL: Extra Large (≥ 1200px)</div>
+        </div>
+
+        <!-- Responsive Grid with 6 items across breakpoints -->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 1</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 2</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 3</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 4</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 5</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="demo-box">Item 6</div>
+            </div>
+        </div>
+
+
+        <!-- Utility Classes Demo -->
+        <div class="demo-box">
+            <h3>Responsive Utilities</h3>
+            <p class="d-none d-md-block text-success">✅ This text only shows on MD screens and larger</p>
+            <p class="d-block d-md-none text-warning">📱 This text only shows on small screens</p>
+        </div>
+
+        <div class="demo-box">
+            
+        <h4>Contextual Table Rows</h4>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>Defaultson</td>
+                        <td>def@somemail.com</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td>Success</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>Danger</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>Info</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>Warning</td>
+                        <td>Refs</td>
+                        <td>bo@example.com</td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Active</td>
+                        <td>Activeson</td>
+                        <td>act@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
